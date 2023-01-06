@@ -1,6 +1,7 @@
 time=zeros(1,1000);
 steerAng=zeros(1,1000);
 steerAng2=zeros(1,1000);
+
 for i=1:1000
     time(i)=i;
     steerAng(i)=sin(i/20);
@@ -10,17 +11,17 @@ end
 figure(1)
 plot(time,steerAng)
 figure(2)
-plot(time(1,1:500),steerAng(1,1:500));
+plot(time(1,1:250),steerAng(1,1:250));
 
 figure(3)
 plot(time(1,1:500),steerAng(1,1:500),'o','MarkerFaceColor','red');
 
 
 figure(4)
-plot(time(1,1:500),steerAng(1,1:500),'o','MarkerFaceColor','red');
+plot(time(1,1:500),steerAng(1,1:500),'o','MarkerFaceColor','black');
 hold on
 plot(time(1,1:500),steerAng2(1,1:500),'x','MarkerFaceColor','Yellow');
-legend('sin','cos');
+legend('steer','wheel');
 
 
 figure(5)

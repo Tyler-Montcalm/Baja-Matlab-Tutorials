@@ -5,8 +5,8 @@ A=rand(10000, 1);
 
 D = (A.*B)'*C;
 % Vs
-for i = 1:1000
-   D= A(i)*B(i)/C(i);
+for x = 1:2:1000
+    D= A(x)*B(x)/C(x);
 end
 
 
@@ -29,6 +29,10 @@ for i=1:1:10000
     end
 end
 
+
+for i=1:1:10000
+    time(i)*
+end
 
 
 

@@ -1,4 +1,4 @@
-t=readtable('id0C3_10_SAS.ID0c3_agSteer025Resl.csv');
+t=readtable('id0C3_10_SAS.ID0c3_agSteer025Resl.csv'); 
 time=t{:,1};
 angle=t{:,2};
 angle_cut=t{:,2};
@@ -23,8 +23,8 @@ for k = 2:length(x)
     p.XData = x(k);
     p.YData = y(k);
     drawnow
-    if(mod(k,100) == 0)
-        pause(0.01)
+    if(mod(k,1000) == 0)
+        pause(0.001)
     
         frame=getframe(gcf)
         writeVideo(myVideo,frame);
